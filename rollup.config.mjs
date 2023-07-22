@@ -23,10 +23,7 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
-      typescript({
-        tsconfig: "./tsconfig.json",
-        sourceMap: true,
-      }),
+      typescript({ tsconfig: "./tsconfig.json" }),
     ],
   },
   {
