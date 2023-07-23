@@ -1,7 +1,7 @@
 {
-  "name": "@leoncardona/react-body-anatomy",
+  "name": "react-body-anatomy",
   "version": "1.0.0",
-  "description": "React component for creating an SVG of the human body (front or back) and highlight specific muscles.",
+  "description": "",
   "scripts": {
     "rollup": "rollup -c ./rollup.config.mjs"
   },
@@ -26,8 +26,5 @@
   "types": "dist/index.d.ts",
   "config": {
     "rollup": "./rollup.config.mjs"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/leoncardona"
   }
 }

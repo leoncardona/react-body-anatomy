@@ -5,16 +5,6 @@ import dts from "rollup-plugin-dts";
 
 import packageJson from "./package.json" assert { type: "json" };
 
-const getTypesPath = (jsFile) => {
-  const pathInfo = parse(jsFile);
-  return format({
-    ...pathInfo,
-    base: "",
-    dir: `${pathInfo.dir}/types`,
-    ext: ".d.ts",
-  });
-};
-
 export default [
   {
     input: "src/index.ts",
@@ -28,7 +18,6 @@ export default [
         file: packageJson.module,
         format: "esm",
         sourcemap: true,
-        preserveModulesRoot: "src",
       },
     ],
     plugins: [
@@ -38,8 +27,8 @@ export default [
     ],
   },
   {
-    input: getTypesPath(pkg.module ?? pkg.main),
-    output: [{ file: pkg.types, format: "esm" }],
+    input: "dist/esm/types/index.d.ts",
+    output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
   },
 ];
