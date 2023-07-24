@@ -4,6 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 
 import packageJson from "./package.json" assert { type: "json" };
+import sourcemaps from "rollup-plugin-sourcemaps";
 
 export default [
   {
@@ -24,6 +25,7 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
+      sourcemaps(),
     ],
   },
   {
