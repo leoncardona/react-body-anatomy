@@ -2,33 +2,57 @@ import React from "react";
 
 interface BackBodyProps {
   data: {
-    trapezius_right: string;
-    trapezius_left: string;
-    rhomboid_right: string;
-    rhomboid_left: string;
-    teres_right: string;
-    teres_left: string;
-    tricep_right: string;
-    tricep_left: string;
-    dorsal_right: string;
-    dorsal_left: string;
-    posterior_deltoid_right: string;
-    posterior_deltoid_left: string;
-    forearm_right: string;
-    forearm_left: string;
-    hand_right: string;
-    hand_left: string;
-    gluteus_right: string;
-    gluteus_left: string;
-    hamstring_right: string;
-    hamstring_left: string;
-    calf_right: string;
-    calf_left: string;
+    trapezius_right?: string;
+    trapezius_left?: string;
+    rhomboid_right?: string;
+    rhomboid_left?: string;
+    teres_right?: string;
+    teres_left?: string;
+    tricep_right?: string;
+    tricep_left?: string;
+    dorsal_right?: string;
+    dorsal_left?: string;
+    posterior_deltoid_right?: string;
+    posterior_deltoid_left?: string;
+    forearm_right?: string;
+    forearm_left?: string;
+    hand_right?: string;
+    hand_left?: string;
+    gluteus_right?: string;
+    gluteus_left?: string;
+    hamstring_right?: string;
+    hamstring_left?: string;
+    calf_right?: string;
+    calf_left?: string;
   };
-  color: string;
+  color?: string;
 }
 
-const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
+const BackBody: React.FC<BackBodyProps> = ({ data, color = "#000000" }) => {
+  const {
+    trapezius_right = "#000000",
+    trapezius_left = "#000000",
+    rhomboid_right = "#000000",
+    rhomboid_left = "#000000",
+    teres_right = "#000000",
+    teres_left = "#000000",
+    tricep_right = "#000000",
+    tricep_left = "#000000",
+    dorsal_right = "#000000",
+    dorsal_left = "#000000",
+    posterior_deltoid_right = "#000000",
+    posterior_deltoid_left = "#000000",
+    forearm_right = "#000000",
+    forearm_left = "#000000",
+    hand_right = "#000000",
+    hand_left = "#000000",
+    gluteus_right = "#000000",
+    gluteus_left = "#000000",
+    hamstring_right = "#000000",
+    hamstring_left = "#000000",
+    calf_right = "#000000",
+    calf_left = "#000000",
+  } = data;
   return (
     <svg
       version="1.0"
@@ -74,71 +98,71 @@ const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
               -6 16 -33 22 -35 9z"
         />
         <path
-          fill={data.trapezius_left}
+          fill={trapezius_left}
           d="M1395 5137 c-1 -116 -46 -176 -233 -315 -82 -61 -83 -62 -50 -62 38
               0 104 -17 190 -49 69 -25 88 -20 88 23 0 18 9 81 20 141 31 168 26 335 -9 335
               -4 0 -6 -33 -6 -73z"
         />
         <path
-          fill={data.trapezius_right}
+          fill={trapezius_right}
           d="M1483 5199 c-18 -18 -17 -219 1 -306 8 -37 17 -96 21 -130 4 -39 12
               -64 21 -67 8 -3 52 8 97 25 45 16 108 32 139 36 l57 6 -80 57 c-102 72 -198
               165 -217 210 -9 19 -18 68 -21 108 -5 59 -8 71 -18 61z"
         />
         <path
-          fill={data.rhomboid_left}
+          fill={rhomboid_left}
           d="M950 4728 c-64 -14 -68 -24 -14 -32 94 -13 121 -38 204 -197 78 -150
               131 -227 199 -293 27 -27 45 -37 57 -32 16 6 17 22 11 194 -7 206 -16 255 -52
               278 -42 27 -128 55 -230 75 -110 21 -111 21 -175 7z"
         />
         <path
-          fill={data.rhomboid_right}
+          fill={rhomboid_right}
           d="M1765 4720 c-172 -36 -239 -67 -257 -119 -17 -52 -18 -423 0 -428 7
               -3 42 26 78 64 62 65 117 151 210 333 35 68 44 78 93 103 30 15 70 27 90 27
               48 0 29 15 -37 29 -65 14 -67 14 -177 -9z"
         />
         <path
-          fill={data.posterior_deltoid_left}
+          fill={posterior_deltoid_left}
           d="M804 4656 c-39 -17 -78 -68 -99 -127 -19 -50 -22 -161 -6 -201 l10
               -28 69 73 c37 39 92 105 121 144 29 40 64 82 78 93 l26 20 -44 20 c-51 23
               -111 25 -155 6z"
         />
         <path
-          fill={data.posterior_deltoid_right}
+          fill={posterior_deltoid_right}
           d="M1945 4653 c-53 -22 -53 -21 -23 -46 14 -12 52 -56 83 -97 31 -41 86
               -105 121 -143 76 -80 79 -78 79 58 0 81 -3 95 -29 143 -17 30 -43 63 -60 75
               -39 27 -118 32 -171 10z"
         />
         <path
-          fill={data.teres_left}
+          fill={teres_left}
           d="M963 4528 c-37 -39 -88 -123 -96 -158 -6 -25 -4 -25 111 -48 144 -28
               177 -29 167 -4 -4 9 -18 45 -31 80 -63 168 -92 192 -151 130z"
         />
         <path
-          fill={data.teres_right}
+          fill={teres_right}
           d="M1846 4538 c-14 -21 -96 -221 -96 -233 0 -11 59 -5 168 17 131 26
               133 29 76 124 -66 110 -116 141 -148 92z"
         />
         <path
-          fill={data.tricep_right}
+          fill={tricep_right}
           d="M2058 4318 c2 -40 -1 -106 -8 -146 -26 -161 -10 -264 57 -365 20 -31
               40 -57 43 -57 3 0 5 57 5 127 1 71 3 173 5 228 5 96 4 102 -27 165 -17 36 -42
               78 -55 93 l-23 28 3 -73z"
         />
         <path
-          fill={data.tricep_left}
+          fill={tricep_left}
           d="M806 4345 c-60 -79 -71 -119 -67 -245 7 -204 6 -325 -3 -345 -8 -17
               -5 -16 18 5 15 13 43 57 63 97 46 92 52 166 28 332 -9 67 -14 137 -11 156 4
               19 5 35 3 35 -3 0 -17 -16 -31 -35z"
         />
         <path
-          fill={data.dorsal_left}
+          fill={dorsal_left}
           d="M870 4277 c0 -31 251 -750 287 -821 8 -17 42 -57 75 -89 32 -32 82
               -88 109 -123 83 -105 83 -105 76 194 -8 304 -23 533 -39 582 -16 52 -148 183
               -210 210 -50 21 -226 60 -273 60 -14 0 -25 -6 -25 -13z"
         />
         <path
-          fill={data.dorsal_right}
+          fill={dorsal_right}
           d="M1875 4271 c-110 -24 -153 -39 -201 -72 -52 -36 -133 -124 -150 -165
               -20 -47 -34 -243 -41 -566 -5 -245 -4 -288 8 -288 8 0 41 34 74 76 33 42 81
               95 106 118 63 56 71 70 128 231 27 77 81 228 119 336 82 230 113 329 106 341
@@ -153,12 +177,12 @@ const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
               165 -14 73 -65 202 -80 202 -3 0 -3 -8 1 -17z"
         />
         <path
-          fill={data.tricep_left}
+          fill={tricep_left}
           d="M679 3993 c-7 -48 -13 -108 -13 -133 -1 -39 2 -45 19 -45 19 0 20 8
               23 124 1 68 -1 128 -7 134 -5 5 -14 -26 -22 -80z"
         />
         <path
-          fill={data.tricep_right}
+          fill={tricep_right}
           d="M2190 3953 c0 -134 7 -160 36 -131 12 12 12 30 -2 128 -8 63 -20 119
               -25 125 -5 5 -9 -42 -9 -122z"
         />
@@ -171,31 +195,31 @@ const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
               -33 64 -58 78 -48 28z"
         />
         <path
-          fill={data.forearm_left}
+          fill={forearm_left}
           d="M522 3697 c-36 -56 -59 -121 -107 -289 -25 -90 -58 -198 -73 -241
               -27 -77 -27 -79 -8 -93 41 -30 53 -19 60 55 12 137 76 402 130 539 13 34 23
               62 21 62 -2 0 -12 -15 -23 -33z"
         />
         <path
-          fill={data.forearm_right}
+          fill={forearm_right}
           d="M2350 3727 c0 -1 14 -38 31 -82 43 -111 94 -318 114 -460 10 -66 19
               -122 21 -124 2 -2 17 2 34 9 34 14 37 28 15 70 -8 15 -40 118 -71 227 -48 172
               -121 363 -138 363 -3 0 -6 -1 -6 -3z"
         />
         <path
-          fill={data.forearm_left}
+          fill={forearm_left}
           d="M548 3572 c-21 -59 -51 -159 -67 -222 -29 -112 -57 -278 -48 -286 8
               -8 88 196 107 272 11 41 24 123 30 182 6 59 13 119 16 135 11 53 -2 26 -38
               -81z"
         />
         <path
-          fill={data.forearm_right}
+          fill={forearm_right}
           d="M2111 3623 c35 -98 115 -254 174 -343 77 -114 89 -126 65 -62 -11 29
               -34 102 -51 163 -17 61 -48 148 -69 194 -36 76 -41 82 -65 78 -14 -3 -36 2
               -50 11 l-25 16 21 -57z"
         />
         <path
-          fill={data.forearm_left}
+          fill={forearm_left}
           d="M774 3659 c-3 -6 -20 -9 -36 -7 -28 4 -31 1 -65 -66 -20 -39 -53
               -131 -75 -205 -21 -74 -47 -154 -58 -179 -11 -25 -19 -46 -18 -48 7 -6 150
               219 188 295 36 73 90 202 90 216 0 9 -19 5 -26 -6z"
@@ -205,7 +229,7 @@ const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
               52 16 25 7 42 18 42 26 0 19 -69 228 -79 237 -4 4 -8 -36 -9 -90z"
         />
         <path
-          fill={data.forearm_right}
+          fill={forearm_right}
           d="M2314 3635 c3 -22 8 -69 11 -105 14 -147 59 -312 113 -415 l21 -40 1
               38 c0 81 -76 386 -130 513 l-20 49 4 -40z"
         />
@@ -214,7 +238,7 @@ const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
               6 12 38 -3 20 -8 82 -12 137 l-7 100 -17 -45z"
         />
         <path
-          fill={data.gluteus_left}
+          fill={gluteus_left}
           d="M1064 3358 c-37 -18 -70 -120 -88 -273 -5 -42 -4 -46 5 -22 10 26 20
               33 31 22 3 -3 -6 -34 -20 -68 -35 -87 -36 -205 -2 -344 l25 -101 45 47 c26 27
               79 64 127 89 157 81 166 100 134 263 -11 57 -25 137 -30 178 -11 87 -25 106
@@ -222,13 +246,13 @@ const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
               58 -151 34z"
         />
         <path
-          fill={data.gluteus_right}
+          fill={gluteus_right}
           d="M1713 3350 c-28 -17 -60 -57 -51 -65 2 -1 33 -16 70 -33 84 -38 148
               -101 173 -170 10 -28 20 -50 22 -49 5 6 -29 203 -43 249 -9 26 -27 57 -41 68
               -33 26 -88 26 -130 0z"
         />
         <path
-          fill={data.gluteus_right}
+          fill={gluteus_right}
           d="M1632 3242 c-7 -5 -21 -62 -32 -133 -10 -68 -24 -145 -29 -169 -27
               -118 -5 -158 122 -222 48 -24 104 -63 139 -96 53 -50 58 -53 58 -31 0 13 9 58
               20 99 24 92 26 225 4 301 -31 107 -118 202 -222 242 -49 20 -44 19 -60 9z"
@@ -242,71 +266,71 @@ const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
               27 60 c31 71 45 120 56 203 5 34 8 62 8 62 -1 0 -22 -16 -47 -34z"
         />
         <path
-          fill={data.hand_left}
+          fill={hand_left}
           d="M223 2971 c-30 -27 -43 -47 -43 -65 0 -14 3 -26 8 -26 9 0 94 105 94
               117 -1 18 -20 10 -59 -26z"
         />
         <path
-          fill={data.hand_right}
+          fill={hand_right}
           d="M2615 3000 c-6 -10 82 -120 97 -120 22 0 3 49 -34 87 -44 45 -53 50
               -63 33z"
         />
         <path
-          fill={data.hand_left}
+          fill={hand_left}
           d="M70 2913 c-43 -34 -50 -43 -43 -60 8 -20 33 -16 72 14 20 14 38 28
               39 29 8 6 -10 44 -21 44 -7 0 -28 -12 -47 -27z"
         />
         <path
-          fill={data.hand_left}
+          fill={hand_left}
           d="M263 2910 c-30 -36 -37 -56 -24 -65 7 -4 19 13 31 41 11 26 19 48 18
               49 -2 1 -13 -10 -25 -25z"
         />
         <path
-          fill={data.hand_right}
+          fill={hand_right}
           d="M2760 2921 c-8 -16 -3 -24 32 -50 48 -36 78 -40 78 -12 0 19 -68 81
               -89 81 -5 0 -15 -9 -21 -19z"
         />
         <path
-          fill={data.hand_left}
+          fill={hand_left}
           d="M376 2887 c-20 -52 -20 -57 -2 -57 8 0 16 17 20 47 8 60 3 64 -18 10z"
         />
         <path
-          fill={data.hand_right}
+          fill={hand_right}
           d="M2563 2916 c3 -8 9 -31 13 -50 3 -21 12 -36 20 -36 19 0 18 14 -6 60
               -19 38 -38 56 -27 26z"
         />
         <path
-          fill={data.hand_right}
+          fill={hand_right}
           d="M2610 2925 c0 -3 9 -24 21 -47 14 -28 24 -37 31 -30 7 7 2 21 -17 46
               -26 35 -35 42 -35 31z"
         />
         <path
-          fill={data.hand_left}
+          fill={hand_left}
           d="M305 2880 c-17 -38 -15 -64 4 -44 10 10 26 84 19 84 -3 0 -13 -18
               -23 -40z"
         />
         <path
-          fill={data.hand_right}
+          fill={hand_right}
           d="M2501 2900 c-1 -39 10 -70 25 -70 18 0 17 6 -6 55 -16 35 -19 37 -19
               15z"
         />
         <path
-          fill={data.hand_left}
+          fill={hand_left}
           d="M95 2720 c-38 -76 -42 -90 -22 -90 13 0 87 127 87 149 0 6 -7 11 -15
               11 -8 0 -30 -30 -50 -70z"
         />
         <path
-          fill={data.hand_right}
+          fill={hand_right}
           d="M2740 2780 c0 -24 71 -150 85 -150 22 0 19 13 -20 90 -20 40 -42 70
               -50 70 -8 0 -15 -5 -15 -10z"
         />
         <path
-          fill={data.hand_left}
+          fill={hand_left}
           d="M199 2733 c-5 -16 -19 -52 -30 -80 -23 -57 -20 -98 6 -72 15 15 65
               142 65 165 0 25 -30 15 -41 -13z"
         />
         <path
-          fill={data.hand_left}
+          fill={hand_left}
           d="M359 2690 c-11 -63 -9 -93 7 -78 10 10 34 129 28 139 -13 22 -23 4
               -35 -61z"
         />
@@ -319,22 +343,22 @@ const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
               152 -28 163 -48 22 -48 24 -40 -206z"
         />
         <path
-          fill={data.hand_right}
+          fill={hand_right}
           d="M2504 2747 c-5 -14 19 -124 30 -135 15 -14 17 13 6 73 -12 66 -25 88
               -36 62z"
         />
         <path
-          fill={data.hand_right}
+          fill={hand_right}
           d="M2657 2754 c-7 -7 49 -164 64 -178 6 -6 13 -6 20 1 8 8 3 34 -21 97
               -30 78 -45 98 -63 80z"
         />
         <path
-          fill={data.hand_left}
+          fill={hand_left}
           d="M270 2681 c-24 -81 -25 -101 -6 -101 14 0 37 62 52 140 5 23 3 30 -9
               30 -11 0 -22 -21 -37 -69z"
         />
         <path
-          fill={data.hand_right}
+          fill={hand_right}
           d="M2594 2668 c16 -58 27 -84 39 -86 21 -4 21 -4 -4 90 -17 61 -25 78
               -39 78 -18 0 -17 -4 4 -82z"
         />
@@ -343,13 +367,13 @@ const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
               -7 34 -18 75 -25 92 -12 29 -13 28 -20 -43z"
         />
         <path
-          fill={data.hamstring_left}
+          fill={hamstring_left}
           d="M1194 2665 c-40 -24 -42 -27 -53 -97 -6 -40 -16 -152 -23 -250 -18
               -262 -11 -296 130 -685 25 -71 31 -81 43 -67 15 18 5 70 -34 179 -53 145 -56
               245 -16 544 22 168 26 401 7 401 -7 0 -32 -11 -54 -25z"
         />
         <path
-          fill={data.hamstring_right}
+          fill={hamstring_right}
           d="M1635 2626 c-7 -73 -2 -144 27 -366 14 -110 19 -194 16 -290 -4 -129 -6 -141 -47 -257 -38 -110 -41 -124 -28 -143 14 -19 15 -18 32 27 10 27 37 98 60 158 73 190 89 267 87 445 0 85 -8 215 -16 288 -9 74 -16 136 -16 138 0 8 -83 64 -95 64 -8 0 -15 -24 -20 -64z"
         />
         <path
@@ -357,14 +381,14 @@ const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
               -28 10 9 11 54 11 312 0 319 -5 3 -16 -20 -25 -52z"
         />
         <path
-          fill={data.hamstring_left}
+          fill={hamstring_left}
           d="M1068 2570 c-43 -38 -46 -43 -67 -142 -13 -57 -25 -150 -28 -208 -4
               -90 -1 -122 21 -220 19 -83 26 -146 27 -225 2 -148 12 -196 22 -98 4 39 16
               100 27 135 23 74 24 99 8 235 -13 114 1 383 25 501 8 34 13 62 12 62 -1 0 -22
               -18 -47 -40z"
         />
         <path
-          fill={data.hamstring_right}
+          fill={hamstring_right}
           d="M1783 2597 c29 -76 50 -413 34 -540 -16 -124 -14 -170 12 -251 11
             -37 21 -89 21 -115 0 -25 5 -53 10 -61 11 -18 13 1 15 160 1 71 9 134 24 195
             34 135 37 220 12 360 -30 175 -35 188 -88 231 -29 24 -44 32 -40 21z"
@@ -378,23 +402,23 @@ const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
             9 404 -17 537 l-13 65 -17 -190z"
         />
         <path
-          fill={data.calf_right}
+          fill={calf_right}
           d="M1786 1775 c-23 -24 -26 -58 -29 -360 -3 -232 -6 -292 -21 -351 -18 -70 -18 -72 0 -97 42 -57 60 -46 103 61 58 144 60 232 12 494 -11 59 -23 141 -27 183 -7 82 -14 94 -38 70z"
         />
         <path
-          fill={data.calf_left}
+          fill={calf_left}
           d="M1075 1723 c-3 -32 -18 -128 -33 -213 -19 -109 -27 -189 -26 -270 0
             -107 2 -120 33 -193 18 -42 41 -87 50 -98 l17 -21 33 31 c22 21 31 37 27 47
             -26 68 -39 216 -40 470 -1 214 -4 274 -15 287 -26 32 -39 20 -46 -40z"
         />
         <path
-          fill={data.calf_left}
+          fill={calf_left}
           d="M1164 1630 c3 -63 8 -185 11 -270 7 -190 22 -335 36 -363 16 -31 91
             -107 106 -107 18 0 43 95 43 166 0 34 -9 115 -20 179 -25 148 -123 450 -158
             485 l-24 25 6 -115z"
         />
         <path
-          fill={data.calf_right}
+          fill={calf_right}
           d="M1701 1711 c-11 -16 -27 -53 -35 -82 -7 -30 -30 -101 -49 -159 -67
             -200 -94 -414 -66 -526 7 -25 18 -48 26 -51 16 -6 87 58 108 97 17 33 32 206
             40 450 3 107 8 219 11 248 7 60 -4 67 -35 23z"
