@@ -34,36 +34,36 @@ interface FrontBodyProps {
   color?: string;
 }
 
-const FrontBody: React.FC<FrontBodyProps> = ({ data, color = "#000000" }) => {
+const FrontBody: React.FC<FrontBodyProps> = ({ data, color }) => {
   const {
-    trapezius_right = "#000000",
-    trapezius_left = "#000000",
-    lateral_deltoid_right = "#000000",
-    lateral_deltoid_left = "#000000",
-    pectoral_right = "#000000",
-    pectoral_left = "#000000",
-    anterior_deltoid_right = "#000000",
-    anterior_deltoid_left = "#000000",
-    bicep_right = "#000000",
-    bicep_left = "#000000",
-    serratus_right = "#000000",
-    serratus_left = "#000000",
-    abs_right = "#000000",
-    abs_left = "#000000",
-    dorsal_right = "#000000",
-    dorsal_left = "#000000",
-    forearm_right = "#000000",
-    forearm_left = "#000000",
-    oblique_right = "#000000",
-    oblique_left = "#000000",
-    lower_abs_right = "#000000",
-    lower_abs_left = "#000000",
-    quadricep_right = "#000000",
-    quadricep_left = "#000000",
-    abductor_right = "#000000",
-    abductor_left = "#000000",
-    hand_right = "#000000",
-    hand_left = "#000000",
+    trapezius_right = color ?? "#000000",
+    trapezius_left = color ?? "#000000",
+    lateral_deltoid_right = color ?? "#000000",
+    lateral_deltoid_left = color ?? "#000000",
+    pectoral_right = color ?? "#000000",
+    pectoral_left = color ?? "#000000",
+    anterior_deltoid_right = color ?? "#000000",
+    anterior_deltoid_left = color ?? "#000000",
+    bicep_right = color ?? "#000000",
+    bicep_left = color ?? "#000000",
+    serratus_right = color ?? "#000000",
+    serratus_left = color ?? "#000000",
+    abs_right = color ?? "#000000",
+    abs_left = color ?? "#000000",
+    dorsal_right = color ?? "#000000",
+    dorsal_left = color ?? "#000000",
+    forearm_right = color ?? "#000000",
+    forearm_left = color ?? "#000000",
+    oblique_right = color ?? "#000000",
+    oblique_left = color ?? "#000000",
+    lower_abs_right = color ?? "#000000",
+    lower_abs_left = color ?? "#000000",
+    quadricep_right = color ?? "#000000",
+    quadricep_left = color ?? "#000000",
+    abductor_right = color ?? "#000000",
+    abductor_left = color ?? "#000000",
+    hand_right = color ?? "#000000",
+    hand_left = color ?? "#000000",
   } = data;
   return (
     <svg
@@ -74,7 +74,7 @@ const FrontBody: React.FC<FrontBodyProps> = ({ data, color = "#000000" }) => {
     >
       <g
         transform="translate(0.000000,2363.000000) scale(0.100000,-0.100000)"
-        fill={color}
+        fill={color ?? "#000000"}
         stroke="none"
       >
         <path

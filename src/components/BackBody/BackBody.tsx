@@ -28,30 +28,30 @@ interface BackBodyProps {
   color?: string;
 }
 
-const BackBody: React.FC<BackBodyProps> = ({ data, color = "#000000" }) => {
+const BackBody: React.FC<BackBodyProps> = ({ data, color }) => {
   const {
-    trapezius_right = "#000000",
-    trapezius_left = "#000000",
-    rhomboid_right = "#000000",
-    rhomboid_left = "#000000",
-    teres_right = "#000000",
-    teres_left = "#000000",
-    tricep_right = "#000000",
-    tricep_left = "#000000",
-    dorsal_right = "#000000",
-    dorsal_left = "#000000",
-    posterior_deltoid_right = "#000000",
-    posterior_deltoid_left = "#000000",
-    forearm_right = "#000000",
-    forearm_left = "#000000",
-    hand_right = "#000000",
-    hand_left = "#000000",
-    gluteus_right = "#000000",
-    gluteus_left = "#000000",
-    hamstring_right = "#000000",
-    hamstring_left = "#000000",
-    calf_right = "#000000",
-    calf_left = "#000000",
+    trapezius_right = color ?? "#000000",
+    trapezius_left = color ?? "#000000",
+    rhomboid_right = color ?? "#000000",
+    rhomboid_left = color ?? "#000000",
+    teres_right = color ?? "#000000",
+    teres_left = color ?? "#000000",
+    tricep_right = color ?? "#000000",
+    tricep_left = color ?? "#000000",
+    dorsal_right = color ?? "#000000",
+    dorsal_left = color ?? "#000000",
+    posterior_deltoid_right = color ?? "#000000",
+    posterior_deltoid_left = color ?? "#000000",
+    forearm_right = color ?? "#000000",
+    forearm_left = color ?? "#000000",
+    hand_right = color ?? "#000000",
+    hand_left = color ?? "#000000",
+    gluteus_right = color ?? "#000000",
+    gluteus_left = color ?? "#000000",
+    hamstring_right = color ?? "#000000",
+    hamstring_left = color ?? "#000000",
+    calf_right = color ?? "#000000",
+    calf_left = color ?? "#000000",
   } = data;
   return (
     <svg
@@ -62,7 +62,7 @@ const BackBody: React.FC<BackBodyProps> = ({ data, color = "#000000" }) => {
     >
       <g
         transform="translate(0.000000,567.000000) scale(0.100000,-0.100000)"
-        fill={color}
+        fill={color ?? "#000000"}
         stroke="none"
       >
         <path
